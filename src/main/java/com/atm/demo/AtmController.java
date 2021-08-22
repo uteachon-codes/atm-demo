@@ -12,6 +12,7 @@ public class AtmController {
 	AtmService atmService;
     
 	@GetMapping("/withdraw")
+	//add postmapping for security
 	public String withdraw(@RequestParam String amount) {
 		
 	    try {

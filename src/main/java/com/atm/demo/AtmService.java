@@ -22,6 +22,7 @@ public class AtmService {
 	  balance = total10s + total5s + total1s;
    }
    
+   // should be separate service Impl
    private String performDenominations(int userInputAmount) {
 	   
 	   StringBuilder denoBlder = new StringBuilder("Output: ");
@@ -37,6 +38,7 @@ public class AtmService {
        
    }
    
+   // add to withdraw service
    public String withdraw(int userInputAmount) throws IncorrectAmountException, InsufficientFundstException {
 	   int origBalance = balance;
 	   if (userInputAmount <= 0) {
@@ -50,6 +52,14 @@ public class AtmService {
 	   
 	   return "Original balance:: " + origBalance + "\n Withdraw successful:: " + userInputAmount + " Remaining balance:: " + balance + "\n" + performDenominations(userInputAmount);
    }
+   
+   // separate services
+   
+   // deposit
+   
+   // changePin
+   
+   // balanceInquiry
 
 
 }
